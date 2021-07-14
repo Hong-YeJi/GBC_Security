@@ -11,6 +11,7 @@ Buffer Overflow : 시스템 해킹의 대표적인 공격 방법 중 하나
 Stack Frame
 -----------
 ![overflow](https://ifh.cc/g/blCnig.png)
+
 RBP : Stack의 시작점을 알리는 용도로 사용   
 RET : return address   
 -> main 함수에서 vuln 함수로 갔다가 main 함수로 다시 돌아가기 위해 스택에 main 함수의 복귀주소를 저장   
@@ -19,6 +20,7 @@ RET : return address
 bof3 문제
 --------
 bof3.c
+
 ![bof3](https://ifh.cc/g/a1znrl.jpg)   
 
 if(innocent == KEY)를 만족하면 system("/bin/sh");를 사용할 수 있다   
@@ -44,5 +46,23 @@ breakpoint를 지정하고 run한 다음, 두 값의 거리를 구한다
 
 cf) ;cat을 입력해서 해당 파일을 실행하게 함
 
-이렇게 cat bof4의 패스워드를 찾을 수 있다
+cat bof4.pw을 입력하여 bof4의 패스워드를 찾을 수 있다
 
+bof4 문제
+--------
+bof4.c
+
+![bof4](https://ifh.cc/g/MrCcTP.jpg)
+
+bof3과 마찬가지로 if(innocent == KEY)를 만족하면 system("/bin/sh");를 사용할 수 있다    
+bof4.c에서는 KEY값이 0x12345678이므로, 스택에서 innocent의 위치를 찾아내서 거기까지 아무 문자열로 덮어 씌우고, 이후에 KEY값인 0x12345678을 입력해주면 된다    
+
+bof3과 마찬가지로 시작 주소와 innocent 위치를 찾아서 그 사이의 거리를 구하면 140 
+
+![input](https://ifh.cc/g/g6se1b.png)
+
+140만큼 아무 문자인 'x'를 채우고 그 뒤에 KEY값을 입력해준다   
+이때, little endian 방식으로 \x78\x56\x34\x12와 같이 입력한다     
+또한, bof3과 달리 인자를 전달해주어야 하므로 ./bof4 `python -c "print 'x' * 140 + '\x78\x56\x34\x12'"`를 입력한다   
+
+cat bof5.pw을 입력하여 bof5의 패스워드를 찾을 수 있다
