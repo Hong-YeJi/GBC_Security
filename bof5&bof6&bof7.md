@@ -32,3 +32,4 @@ docker run -it --privileged ccss17/bof로 접속하면 shell code 주소값이 �
 
 bof7문제
 =======
+![image](https://user-images.githubusercontent.com/61008728/125768498-defc7830-e66e-40c7-b156-af76978ee141.png)
