@@ -21,10 +21,14 @@ lea 부분에서 innocent의 시작 주소 rbp-0x90을 찾을 수 있으므로 �
 bof6문제
 =======
 ![image](https://user-images.githubusercontent.com/61008728/125749564-dc53ce10-b50e-4705-a48e-182dca0eef52.png)   
+buf 사이즈가 128이고 64비트에서 SFP는 8바이트를 덮어줘야 하므로 buf와 return address까지의 거리가 136이다   
+
 ![image](https://user-images.githubusercontent.com/61008728/125750072-d3f52f33-2dcf-4829-abdb-1352ef737201.png)
-buf 사이즈가 128이고 64비트에서 SFP는 8바이트를 덮어줘야 하므로 buf와 return address까지의 거리가 136이다     
 shell code와 아무 문자를 136만큼 전달하는데, 쉘 코드가 27바이트를 차지하므로 136 - 27 = 109바이트만큼 'a'를 전달한다    
-그 뒤에 쉘 코드 주소값을 덮어주는데 ASLR이 적용되어 쉘 코드 주소값이 계속 바뀌어서 이 문제를 아직 해결하지 못했다
+
+그 뒤에 쉘 코드 주소값을 덮어줄 때, ASLR이 적용되어 쉘 코드 주소값이 계속 바뀌는 문제가 있었는데   
+docker run -it --privileged ccss17/bof로 접속하면 shell code 주소값이 변하지 않아서 해결할 수 있었다   
+![image](https://user-images.githubusercontent.com/61008728/125768221-3e346345-09ba-4365-abca-9d2778920044.png)
 
 bof7문제
 =======
