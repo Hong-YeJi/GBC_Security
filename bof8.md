@@ -40,9 +40,3 @@ dummy + ret 주소값이 16바이트가 되어야 하므로, dummy값은 16-8 = 
 ![image](https://user-images.githubusercontent.com/61008728/125894579-7d16a768-6f75-46b7-ae5e-6673dee30e0f.png)
 
 이후, cat bof9.pw를 입력하여 bof9의 패스워드를 찾을 수 있다   
-
-bof10문제
-=======
-bof10.c
-------
-![image](https://user-images.githubusercontent.com/61008728/125967188-0e89bfe1-7a35-44c1-bcca-e0f1fd0abb6e.png)
