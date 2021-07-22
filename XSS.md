@@ -26,7 +26,6 @@ Medium
 ![image](https://user-images.githubusercontent.com/61008728/126570287-eca53a97-2e9c-42e2-a02f-23befb5db996.png)   
 스크립트 태그를 입력했을 때는 스크립트문이 적용이 되지 않아 Message에 입력한 내용이 그대로 나왔는데,   
 이번에는 img 태그가 적용이 되어 Message에 아무것도 없음을 확인할 수 있다.   
-(img 태그를 사용해서 그런지 새로운 팝업창이 따로 뜨지 않았다)
 
 High
 ----
