@@ -18,7 +18,7 @@ User ID에 2를 넣어보면 User ID가 2인 First name과 Surname을 출력한�
 앞에서 User ID에 1을 넣으니 User ID가 1인 First name과 Surname이 나왔었다.   
 이것을 이용하여 1' or '1'='1'#을 입력하면 User ID가 1인 것 또는 true를 반환하여 쿼리문 결과가 항상 참이 되기 때문에 테이블의 전체 내용이 출력된다.  
 SQL 구문의 주석(#)을 의도적으로 삽입하여 Where 조건이 무시되게 할 수 있다.    
-UserID 값에 주석을 삽입하면 주석 이하의 구문은 실행되지 않게 되고 UserID가 1인 것 또는 true를 반환하게 되어 테이블의 전채 내용을 출력할 수 있다.   
+UserID 값에 주석을 삽입하면 주석 이하의 구문은 실행되지 않게 되고 조건이 항상 참이 되어서 테이블의 전채 내용을 출력할 수 있다.   
 
 이렇게 출력된 정보를 보면 User ID가 총 5개가 있음을 알 수 있다.
 ![image](https://user-images.githubusercontent.com/61008728/126573618-96b7158f-0727-42ab-8e74-68600df9ae78.png)   
@@ -53,7 +53,7 @@ High
 ![image](https://user-images.githubusercontent.com/61008728/126579679-5aceb411-78f2-4394-9839-f4e76d9dc287.png)   
 1' or '1'='1'#을 입력하여 User ID가 1인 것 또는 true를 반환하여 쿼리문 결과가 항상 참이 되게 한다.    
 SQL 구문의 주석(#)을 의도적으로 삽입하여 Where 조건이 무시되게 할 수 있다.    
-UserID 값에 주석을 삽입하면 주석 이하의 구문은 실행되지 않게 되고 UserID가 1인 것 또는 true를 반환하게 되어 테이블의 전채 내용을 출력할 수 있다.   
+UserID 값에 주석을 삽입하면 주석 이하의 구문은 실행되지 않게 되고 조건이 항상 참이 되어서 테이블의 전채 내용을 출력할 수 있다.   
 
 ![image](https://user-images.githubusercontent.com/61008728/126579688-78681352-8e2a-4844-b53c-3d4a1534b612.png)   
 테이블의 전체 내용이 출력된 것을 확인할 수 있다.   
